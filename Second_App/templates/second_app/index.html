@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SECOND APP</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 </head>
 <body>
 
-    <h1>Hello from Index File</h1>
+    <h1>This is a picture from django</h1>
+    <img src="{% static "images/leetcode.jpg" %}" alt="uh oh, i dont show">
     {% block content %}
 
     {{insert_me}}
