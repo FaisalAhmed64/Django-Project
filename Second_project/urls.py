@@ -20,7 +20,7 @@ from Second_App.admin import admin
 
 
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('Second_App.urls')),
-    path('', views.index, name='index'),
+    path('index/', views.index, name='index'),
 ] 

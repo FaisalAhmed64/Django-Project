@@ -12,11 +12,36 @@
 </head>
 <body>
 
-    <h1>This is a picture from django</h1>
+    <!-- <h1>This is a picture from django</h1>
     <img src="{% static "images/leetcode.jpg" %}" alt="uh oh, i dont show">
     {% block content %}
 
-    {{insert_me}}
+    {{insert_me}} -->
+
+    <h1>Hi welcome to Djnago Lecture</h1>
+    <h2></h2>
+
+    <div>
+        {% if acces_records %}
+        <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Date Access</th>
+            </thead>
+
+            {% for acc in access_records %}
+
+            <tr>
+                <td>{{acc.name}}</td>
+                <td>{{acc.Date}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        {% else %}
+        <p>NO acces Records found</p>
+        {% endif %}
+    </div>
     
 </body>
 {% endblock content %}
